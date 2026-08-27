@@ -25,16 +25,16 @@ Target Godot 4.7+. Verify shader-type processor functions, built-ins, render mod
 
 - Track coordinate spaces explicitly. Spatial vertex inputs are local by default and spatial fragment normals are view-space; CanvasItem vertices are local pixel coordinates. Use the provided transform matrices rather than ad-hoc conversions.
 - In a CanvasItem `fragment()`, input `COLOR` already contains the default texture multiplied by vertex color, `modulate`, and `self_modulate`. Preserve it when that is desired; sample `TEXTURE` explicitly only when raw texels or custom UVs are needed.
-- Use `instance uniform` for per-node variation in `canvas_item` and `spatial` shaders instead of duplicating materials. Use regular uniforms when all users of the material should share one value.
+- Use `instance uniform` for per-node variation in `canvas_item` and `spatial` shaders instead of duplicating materials.
 - `TIME` rolls over after 3,600 seconds by default, follows `Engine.time_scale`, and ignores pause. Drive a global uniform from GDScript when those semantics do not fit.
 - With `skip_vertex_transform`, perform every required transform yourself. Writing spatial `POSITION` overrides projection and requires a valid clip-space value on every path. Writing `DEPTH` on any path requires writing it on all paths.
-- Read screen, depth, and normal-roughness buffers through declared samplers using `hint_screen_texture`, `hint_depth_texture`, or `hint_normal_roughness_texture` and `SCREEN_UV`; choose filter, mipmap, and repeat hints deliberately.
+- Read screen, depth, and normal-roughness buffers through declared samplers using `hint_screen_texture`, `hint_depth_texture`, or `hint_normal_roughness_texture` and `SCREEN_UV`. Add `repeat_disable` so edge samples do not wrap, `filter_nearest` when reading the matching pixel, and `filter_linear_mipmap` only when the effect blurs or samples at varying scale.
 - Writing spatial `ALPHA`, even conditionally, moves the material to the transparent pipeline with its sorting, shadow, and screen-texture limitations. Avoid it for opaque materials.
 
 ## Cost and compatibility
 
 - Prefer `CanvasItemMaterial`, `StandardMaterial3D`, and `WorldEnvironment` features when they express the effect; write a custom shader only for behavior they cannot provide.
 - Write only the material outputs the effect needs; Godot removes unused functionality. Do not define `light()` unless replacing the built-in lighting behavior.
-- Avoid `discard` unless clipping is required; it defeats the depth prepass. Move invariant work out of per-fragment code and prefer vertex-stage work only when interpolation preserves the result.
-- Do not add precision qualifiers speculatively; conversions and mobile drivers can erase the benefit. Profile representative hardware and test every renderer the project supports.
+- Avoid `discard` unless clipping is required; it defeats the depth prepass. Move per-fragment work into `vertex()` only when linear interpolation preserves the result.
+- Do not add precision qualifiers speculatively; conversions and mobile drivers can erase the benefit.
 - Godot 4.4+ exposes `CURRENT_RENDERER`, `RENDERER_COMPATIBILITY`, `RENDERER_MOBILE`, and `RENDERER_FORWARD_PLUS` to the shader preprocessor. Branch on them only for real renderer differences.
