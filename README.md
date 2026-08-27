@@ -7,7 +7,7 @@ A efficient and lightweight Agent Skills plugin for Godot 4.7+. Works with Claud
 ### Claude Code
 
 ```sh
-/plugin marketplace add lanstar/godot-skills
+/plugin marketplace add xlanstar/godot-skills
 /plugin install godot-skills@godot-skills
 ```
 
@@ -16,14 +16,14 @@ If the install summary says `Run /reload-plugins to activate.`, run that command
 ### Codex
 
 ```sh
-codex plugin marketplace add https://github.com/lanstar/godot-skills
+codex plugin marketplace add https://github.com/xlanstar/godot-skills
 codex plugin add godot-skills@godot-skills
 ```
 
 ### Pi Coding Agent
 
 ```sh
-pi install godot-skills
+pi install npm:godot-skills
 ```
 
 ### Local development
