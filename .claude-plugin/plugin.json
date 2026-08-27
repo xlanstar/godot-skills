@@ -1,0 +1,8 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "godot-skills",
+  "displayName": "godot-skills",
+  "version": "0.0.0",
+  "description": "Agent Skills for Godot 4.7+.",
+  "keywords": ["godot", "gdscript", "gdshader", "agent-skills"]
+}

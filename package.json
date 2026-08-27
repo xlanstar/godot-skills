@@ -1,0 +1,29 @@
+{
+  "name": "godot-skills",
+  "version": "0.0.0",
+  "description": "Agent Skills for Godot 4.7+.",
+  "keywords": [
+    "pi-package",
+    "agent-skills",
+    "godot",
+    "gdscript",
+    "gdshader"
+  ],
+  "scripts": {
+    "version": "sh scripts/sync-version.sh",
+    "postversion": "git push --follow-tags"
+  },
+  "files": [
+    ".claude-plugin",
+    ".codex-plugin",
+    ".agents",
+    "agents",
+    "skills",
+    "README.md"
+  ],
+  "pi": {
+    "skills": [
+      "./skills"
+    ]
+  }
+}

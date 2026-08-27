@@ -1,0 +1,13 @@
+{
+  "name": "godot-skills",
+  "interface": { "displayName": "godot-skills" },
+  "plugins": [
+    {
+      "name": "godot-skills",
+      "source": { "source": "url", "path": "./" },
+      "description": "Agent Skills for Godot 4.7+.",
+      "policy": { "installation": "AVAILABLE", "authentication": "ON_INSTALL" },
+      "category": "Development"
+    }
+  ]
+}

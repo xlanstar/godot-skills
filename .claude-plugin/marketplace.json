@@ -1,0 +1,16 @@
+{
+  "$schema": "https://www.schemastore.org/claude-code-marketplace.json",
+  "name": "godot-skills",
+  "owner": {
+    "name": "lanstar",
+    "email": "danny95624268@gmail.com"
+  },
+  "plugins": [
+    {
+      "name": "godot-skills",
+      "source": "./",
+      "description": "Agent Skills for Godot 4.7+.",
+      "category": "Development"
+    }
+  ]
+}
