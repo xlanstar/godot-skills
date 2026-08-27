@@ -23,7 +23,7 @@ codex plugin add godot-skills@godot-skills
 ### Pi Coding Agent
 
 ```sh
-pi install npm:godot-skills
+pi install npm:@modastar/godot-skills
 ```
 
 ### Local development
