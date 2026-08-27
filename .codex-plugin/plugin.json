@@ -1,6 +1,6 @@
 {
   "name": "godot-skills",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Agent Skills for Godot 4.7+.",
   "keywords": ["godot", "gdscript", "gdshader", "agent-skills"],
   "skills": "./skills/",
