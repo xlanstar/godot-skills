@@ -1,9 +1,9 @@
 ---
 name: godot-character-body
-description: "Write, edit, or review CharacterBody2D or CharacterBody3D movement."
+description: "Write, edit, or review CharacterBody2D or CharacterBody3D."
 ---
 
-# Character movement
+# Character Body
 
 Target Godot 4.7+.
 

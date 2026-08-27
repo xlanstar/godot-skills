@@ -1,9 +1,9 @@
 ---
-name: godot-multimesh
-description: "Draw thousands to millions of copies of one mesh in a single draw call with MultiMesh in Godot: setup order, per-instance color/custom data, buffer updates, culling limits, and when not to use it."
+name: godot-multimesh-3d
+description: "Draw thousands to millions of copies of one mesh in a single 3D draw call with MultiMeshInstance3D in Godot: setup order, per-instance color/custom data, buffer updates, physics interpolation, and when not to use it."
 ---
 
-# MultiMesh
+# MultiMeshInstance3D
 
 Target Godot 4.7+.
 
