@@ -4,3 +4,6 @@ Desktop.ini
 
 .claude/
 !.claude/settings.json
+
+*.local
+*.local.*
