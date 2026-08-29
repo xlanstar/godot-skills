@@ -1,0 +1,6 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "godot-skills",
+  "version": "0.1.3",
+  "description": "Agent Skills for Godot 4.7+."
+}

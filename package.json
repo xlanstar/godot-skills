@@ -14,6 +14,7 @@
     "postversion": "git push --follow-tags"
   },
   "files": [
+    "plugin.json",
     ".claude-plugin",
     ".codex-plugin",
     ".agents",
