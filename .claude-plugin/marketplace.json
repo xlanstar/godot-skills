@@ -9,7 +9,7 @@
     {
       "name": "godot-skills",
       "source": "./",
-      "description": "Agent Skills for Godot 4.7+.",
+      "description": "Make your coding agent write modern Godot 4.7+ best practices — lightweight and token-efficient.",
       "category": "Development"
     }
   ]

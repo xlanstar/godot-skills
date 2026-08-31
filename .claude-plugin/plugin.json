@@ -3,6 +3,6 @@
   "name": "godot-skills",
   "displayName": "godot-skills",
   "version": "0.1.4",
-  "description": "Agent Skills for Godot 4.7+.",
+  "description": "Make your coding agent write modern Godot 4.7+ best practices — lightweight and token-efficient.",
   "keywords": ["godot", "gdscript", "gdshader", "agent-skills"]
 }
