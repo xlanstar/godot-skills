@@ -2,7 +2,7 @@
   "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
   "name": "godot-skills",
   "displayName": "godot-skills",
-  "version": "0.1.5",
+  "version": "0.2.0",
   "description": "Make your coding agent write modern Godot 4.7+ best practices — lightweight and token-efficient.",
   "keywords": ["godot", "gdscript", "gdshader", "agent-skills"]
 }
